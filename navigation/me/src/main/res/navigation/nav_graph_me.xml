@@ -95,7 +95,7 @@
     <!-- navigate to Article screen that Article modules and Me Module don't know each other -->
     <fragment
         android:id="@+id/articleFragment"
-        android:name="com.truedigital.navigation.article.ArticleFragment"
+        android:name="com.truedigital.navigation.article.presentation.ArticleFragment"
         android:label="Article Fragment"
         tools:layout="@layout/fragment_article" />
 
