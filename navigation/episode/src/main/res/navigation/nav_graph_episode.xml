@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_episode"
+    app:startDestination="@id/episodeFragment">
+
+    <fragment
+        android:id="@+id/episodeFragment"
+        android:name="com.truedigital.navigation.episode.EpisodeFragment"
+        android:label="Episode Fragment"
+        tools:layout="@layout/fragment_episode" >
+
+        <action
+            android:id="@+id/action_episodeFragment_to_accountFragment"
+            app:destination="@id/accountFragment"
+            app:enterAnim="@anim/pop_in_anim"
+            app:exitAnim="@anim/pop_out_anim"
+            app:popEnterAnim="@anim/warp_in_anim"
+            app:popExitAnim="@anim/warp_out_anim"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.truedigital.navigation.me.AccountFragment"
+        android:label="Account Fragment"/>
+
+</navigation>

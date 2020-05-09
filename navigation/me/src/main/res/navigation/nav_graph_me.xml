@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_me"
+    app:startDestination="@id/meFragment">
+
+    <fragment
+        android:id="@+id/meFragment"
+        android:name="com.truedigital.navigation.me.MeFragment"
+        android:label="Main Fragment"
+        tools:layout="@layout/fragment_me">
+        <action
+            android:id="@+id/action_meFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+
+        <action
+            android:id="@+id/action_meFragment_to_inboxFragment"
+            app:destination="@id/inboxFragment" />
+
+        <action
+            android:id="@+id/action_meFragment_to_episodeFragment"
+            app:destination="@id/episodeFragment"
+            app:enterAnim="@anim/pop_in_anim"
+            app:exitAnim="@anim/pop_out_anim"
+            app:popEnterAnim="@anim/warp_in_anim"
+            app:popExitAnim="@anim/warp_out_anim" />
+
+        <action
+            android:id="@+id/action_meFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.truedigital.navigation.me.AccountFragment"
+        android:label="Account Fragment"
+        tools:layout="@layout/fragment_account">
+
+        <argument
+            android:name="message"
+            android:defaultValue="Hello"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="number"
+            android:defaultValue="0"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <argument
+            android:name="account_id"
+            android:defaultValue="1"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_accountFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/slide_in_anim"
+            app:exitAnim="@anim/slide_out_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.truedigital.navigation.me.InboxFragment"
+        android:label="Inbox Fragment"
+        tools:layout="@layout/fragment_inbox">
+        <argument
+            android:name="inbox_model"
+            android:defaultValue="@null"
+            app:argType="com.truedigital.navigation.me.model.InboxModel"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.truedigital.navigation.me.EditProfileFragment"
+        android:label="Edit Profile Fragment"
+        tools:layout="@layout/fragment_edit_profile">
+
+        <action
+            android:id="@+id/action_pop_to_me"
+            app:popUpTo="@id/meFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/episodeFragment"
+        android:name="com.truedigital.navigation.episode.EpisodeFragment"
+        android:label="Episode Fragment"
+        tools:layout="@layout/fragment_episode" />
+
+    <!-- navigate to Article screen that Article modules and Me Module don't know each other -->
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.truedigital.navigation.article.ArticleFragment"
+        android:label="Article Fragment"
+        tools:layout="@layout/fragment_article" />
+
+</navigation>
