@@ -1,8 +1,9 @@
-# Navigation Graph Guidelines
+# Navigation Graph x Modular
 
-### - Setup
-### - Navigate to activity, fragment
-### - Parsing parameter
+### - Use Navigation with Modular
+### - Use Koin, ReactiveX, Retrofit
+### - Navigate to activity, fragment between module
+### - Parsing parameter with navigation
 
 
 ### List of Modular
@@ -27,6 +28,7 @@
 ```
     - ArticleActivity
     - ArticleFragment
+    - Request Api
 ```
 
 #### Episode Module
