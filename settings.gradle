@@ -3,3 +3,5 @@ include ':app'
 include ':navigation:me'
 include ':navigation:article'
 include ':navigation:episode'
+
+include ':common:foundation'
