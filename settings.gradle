@@ -5,3 +5,4 @@ include ':navigation:article'
 include ':navigation:episode'
 
 include ':common:foundation'
+include ':common:core'
