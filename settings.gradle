@@ -6,4 +6,6 @@ include ':navigation:episode'
 
 include ':common:foundation'
 include ':common:core'
+
 include ':common:share:data'
+include ':common:share:component'

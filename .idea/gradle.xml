@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/common/core" />
             <option value="$PROJECT_DIR$/common/foundation" />
             <option value="$PROJECT_DIR$/common/share" />
+            <option value="$PROJECT_DIR$/common/share/component" />
             <option value="$PROJECT_DIR$/common/share/data" />
             <option value="$PROJECT_DIR$/navigation" />
             <option value="$PROJECT_DIR$/navigation/article" />
